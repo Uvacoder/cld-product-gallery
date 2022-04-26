@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.cld-product-images {
+  display: block;
+  width: 54.16667%;
+  float: left;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  margin-bottom: 1rem;
+}
+.cld-product-text {
+    font-size: 16px;
+    clear: right;
+    float: right;
+    width: 45.833333%;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 1.5rem;
+}
