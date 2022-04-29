@@ -1,26 +1,26 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import dynamic from 'next/dynamic';
+import dynamic from 'next/dynamic'
+import Header from "../components/Header";
 
-const DynamicProductGallery = dynamic(() => import('../components/ProductGallery'), {
-  ssr: false,
-});
+
+const DynamicProductGallery = dynamic(
+  () => import('../components/ProductGallery'),
+  {
+    ssr: false,
+  }
+)
 
 const Home: NextPage = () => {
   return (
- 
-
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
+    <div className="flex min-h-screen flex-col items-center justify-center">
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="container mx-auto px-4">
-          {/* Hello */}
-          <DynamicProductGallery cloudName="demo" />
-        </div>
+      <Header />
 
       <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
         <h1 className="text-6xl font-bold">
@@ -36,8 +36,6 @@ const Home: NextPage = () => {
             pages/index.tsx
           </code>
         </p>
-
-    
 
         <div className="mt-6 flex max-w-4xl flex-wrap items-center justify-around sm:w-full">
           <a

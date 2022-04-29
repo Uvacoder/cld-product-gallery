@@ -29,7 +29,6 @@ function ProductGallery({ cloudName }: PGProps) {
     // debugger;
 
     console.log('Component mounted')
-    // const cld: any = window.cloudinary;
     const productGallery = window.cloudinary.galleryWidget({
       container: '#product-gallery',
       cloudName: cldName,
@@ -38,6 +37,7 @@ function ProductGallery({ cloudName }: PGProps) {
         { tag: 'electric_car_product_gallery_demo', mediaType: 'video' },
         { tag: 'electric_car_360_product_gallery_demo', mediaType: 'spin' },
       ],
+      "carouselLocation": "bottom",
     })
     productGallery.render()
   }, [loaded])
@@ -47,7 +47,7 @@ function ProductGallery({ cloudName }: PGProps) {
       {/* <h4 className="mt-5 mb-5 text-center text-lg md:text-left">
         Use Cloudinary Upload Widget to Upload and share images.
       </h4> */}
-      <div id="product-gallery" ></div>
+      <div id="product-gallery" className="pg-gallery" ></div>
     </>
   )
 }
